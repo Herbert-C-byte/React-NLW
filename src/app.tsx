@@ -1,5 +1,5 @@
 import "./index.css";
-import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus, User } from 'lucide-react'
+import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus, User, Mail } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 
 
@@ -178,8 +178,8 @@ function App() {
                 </p>
               </div>
              
-              <form onSubmit={addNewEmailToInvite}>
-                <div className="py-2.5 px-4 flex items-center flex-1 gap-2">
+              <form onSubmit={addNewEmailToInvite} className="space-y-3">
+                <div className="py-2.5 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
                   <User className="text-zinc-400 size-5" />
                   <input
                     name="name" 
@@ -188,8 +188,8 @@ function App() {
                   />
                 </div>
 
-                <div className="py-2.5 px-4 flex items-center flex-1 gap-2">
-                  <User className="text-zinc-400 size-5" />
+                <div className="py-2.5 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
+                  <Mail className="text-zinc-400 size-5" />
                   <input 
                     type="email" 
                     name="email" 
