@@ -6,7 +6,7 @@ import { useState, type FormEvent } from 'react'
 function App() {
   const [isGuestsOpen, setIsGuestsOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(true)
+  const [isConfirmTripModalOpen, setIsConfirmTripModalOpen] = useState(false)
 
   const [emailsToInvite, setEmailsToInvite] = useState([
     'Cassio@gmail.com'
@@ -68,7 +68,10 @@ function App() {
     <>
       <div className="h-screen flex items-center justify-center">
         <div className="max-w-3xl w-full px-6 text-center space-y-10">
-          <p className="text-zinc-300 text-lg">Convide seus amigos e planeie a sua próxima viagem!</p>
+          <div className="flex flex-col items-center">
+            <img src="src/assets/nlwreactLogo.png" alt="Logo" />
+            <p className="text-zinc-300 text-lg">Convide seus amigos e planeie a sua próxima viagem!</p>
+          </div>
           <div className="space-y-4">
             <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center gap-3">
               <div className="flex items-center gap-2 flex-1">
@@ -98,12 +101,16 @@ function App() {
               <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center gap-3">
               <button type="button" onClick={openModal} className="flex items-center gap-2 flex-1 text-left">
                 <UserRoundPlus className="size-5 text-zinc-400" />
-                <span className="text-zinc-400 text-lg flex-1">Quem estará na viagem?</span>
+                {emailsToInvite.length > 0 ? (
+                  <span className="text-zinc-100 text-lg flex-1">{emailsToInvite.length} pessoa(s) convidada(s)</span>
+                ) : (
+                  <span className="text-zinc-400 text-lg flex-1">Quem estará na viagem?</span>
+                )}
               </button>
 
               <div className="w-px h-6 bg-zinc-800" />
 
-              <button onClick={openModal} className="bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400 ">
+              <button onClick={openConfirmTripModal} className="bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400 ">
                 Confirmar viagem
                 <ArrowRight className="size-5" />
               </button>
@@ -199,8 +206,7 @@ function App() {
                 </div>
 
                 <button type="submit" className="bg-lime-300 w-full justify-center text-lime-950 rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-lime-400 ">
-                Convidar
-                <Plus className="size-5" />
+                Confirmar criação da viagem
                 </button>
               </form>
             </div>
