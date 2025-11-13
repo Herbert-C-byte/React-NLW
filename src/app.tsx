@@ -1,15 +1,16 @@
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router";
 import "./index.css";
 
-const router = createBrowserRouter{[
+let router = createBrowserRouter([
   {
     path: "/",
-    element: 
-  }
-]}
+    Component: Root,
+    loader: loadRootData,
+  },
+]);
 
 function App() {
   return <h1>Hello World!</h1>
