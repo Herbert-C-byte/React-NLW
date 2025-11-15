@@ -10,6 +10,11 @@ let router = createBrowserRouter([
     Component: Root,
     loader: loadRootData,
   },
+  {
+    path: "/teste",
+    Component: Root,
+    loader: loadRootData,
+  },
 ]);
 
 function App() {
