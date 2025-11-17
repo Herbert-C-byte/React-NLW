@@ -12,8 +12,8 @@ let router = createBrowserRouter([
   },
   {
     path: "/teste",
-    Component: Root,
-    loader: loadRootData,
+    Component: Root, // just testing
+    loader: loadRootData, // just testing
   },
 ]);
 
