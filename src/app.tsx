@@ -9,7 +9,7 @@ let router = createBrowserRouter([
     path: "/",
     Component: Root,
     loader: loadRootData,
-    element: <h2>Teste</h2>,
+    element: <h1>Teste 1 só para garantir</h1>,
   },
 ]);
 
