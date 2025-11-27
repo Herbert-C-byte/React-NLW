@@ -14,7 +14,7 @@ let router = createBrowserRouter([
 ]);
 
 function App() {
-  return <h1>Hello World! just checking</h1>
+  return <RouterProvider router={router} />
 }
 
 export default App
