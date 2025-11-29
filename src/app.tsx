@@ -12,7 +12,7 @@ let router = createBrowserRouter([
     element: <h1>Hello World</h1>,
   },
   {
-    path: "/teste",
+    path: "/trips/:tipsId",
     Component: Root,
     loader: loadRootData,
     element: <h1>Teste</h1>,
