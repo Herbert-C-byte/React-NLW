@@ -14,7 +14,7 @@ let router = createBrowserRouter([
   {
     path: "/trips/:tipsId",
     Component: Root,
-    loader: loadRootData,
+    loader: l,
     element: <h1>Teste</h1>,
   },
 ]);
