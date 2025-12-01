@@ -3,7 +3,8 @@ import {
   RouterProvider,
 } from "react-router";
 import "./index.css";
-
+import {CreateTripPage} from "./pages/CreateTripPage";
+import {TripDetailPage}
 let router = createBrowserRouter([
   {
     path: "/",
@@ -14,7 +15,7 @@ let router = createBrowserRouter([
   {
     path: "/trips/:tipsId",
     Component: Root,
-    loader: l,
+    loader: ,
     element: <h1>Teste</h1>,
   },
 ]);
