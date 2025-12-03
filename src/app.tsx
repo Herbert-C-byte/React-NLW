@@ -12,7 +12,7 @@ let router = createBrowserRouter([
     loader: loadRootData,
     element: <h1>Hello World</h1>,
   },
-  {
+  {jfj
     path: "/trips/:tipsId",
     Component: Root,
     loader: ,
