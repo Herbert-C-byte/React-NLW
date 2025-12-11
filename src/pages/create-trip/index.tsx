@@ -1,4 +1,4 @@
-import "./index.css";
+import "../../index.css";
 import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus, User, Mail } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 
