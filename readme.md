@@ -1,0 +1,1 @@
+This is a trip planner made with react to follow the react
